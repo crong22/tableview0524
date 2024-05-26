@@ -13,6 +13,8 @@
 		D831ECAB2C00CE29006DD52F /* Base in Resources */ = {isa = PBXBuildFile; fileRef = D831ECAA2C00CE29006DD52F /* Base */; };
 		D831ECAD2C00CE2B006DD52F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D831ECAC2C00CE2B006DD52F /* Assets.xcassets */; };
 		D831ECB02C00CE2B006DD52F /* Base in Resources */ = {isa = PBXBuildFile; fileRef = D831ECAF2C00CE2B006DD52F /* Base */; };
+		D831ECBC2C00D398006DD52F /* TodoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D831ECBB2C00D398006DD52F /* TodoTableViewController.swift */; };
+		D831ECBE2C00D5FF006DD52F /* TodoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D831ECBD2C00D5FF006DD52F /* TodoTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		D831ECAC2C00CE2B006DD52F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D831ECAF2C00CE2B006DD52F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D831ECB12C00CE2B006DD52F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D831ECBB2C00D398006DD52F /* TodoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTableViewController.swift; sourceTree = "<group>"; };
+		D831ECBD2C00D5FF006DD52F /* TodoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +63,9 @@
 				D831ECA32C00CE29006DD52F /* AppDelegate.swift */,
 				D831ECA52C00CE29006DD52F /* SceneDelegate.swift */,
 				D831ECA72C00CE29006DD52F /* ViewController.swift */,
+				D831ECBB2C00D398006DD52F /* TodoTableViewController.swift */,
 				D831ECA92C00CE29006DD52F /* Main.storyboard */,
+				D831ECBD2C00D5FF006DD52F /* TodoTableViewCell.swift */,
 				D831ECAC2C00CE2B006DD52F /* Assets.xcassets */,
 				D831ECAE2C00CE2B006DD52F /* LaunchScreen.storyboard */,
 				D831ECB12C00CE2B006DD52F /* Info.plist */,
@@ -139,7 +145,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D831ECA82C00CE29006DD52F /* ViewController.swift in Sources */,
+				D831ECBC2C00D398006DD52F /* TodoTableViewController.swift in Sources */,
 				D831ECA42C00CE29006DD52F /* AppDelegate.swift in Sources */,
+				D831ECBE2C00D5FF006DD52F /* TodoTableViewCell.swift in Sources */,
 				D831ECA62C00CE29006DD52F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,6 +314,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sesac.tableview0524;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -333,6 +345,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sesac.tableview0524;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
