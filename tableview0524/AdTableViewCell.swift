@@ -9,7 +9,8 @@ import UIKit
 
 class AdTableViewCell: UITableViewCell {
 
+    @IBOutlet var mainView: UIView!
     @IBOutlet var adTitleLabel: UILabel!
     @IBOutlet var adButton: UIButton!
-    
+
 }
