@@ -68,7 +68,7 @@ class CityTableViewCell: UITableViewCell {
 
               saveLabel.text = "저장 \(data.save ?? 0)"
           
-              let url = URL(string: data.travel_image ?? "nil")
+            let url = URL(string: data.travel_image ?? "nil")
               mainImageView.kf.setImage(with: url, placeholder: UIImage(systemName: "heart"))
         }
     }

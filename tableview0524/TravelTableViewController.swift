@@ -31,63 +31,16 @@ class TravelTableViewController: UITableViewController {
         //Swift Type Casting
         let cell = tableView.dequeueReusableCell(withIdentifier: "TravelTableViewCell", for: indexPath) as! TravelTableViewCell
         let data = travellist[indexPath.row]
-        
-        let formatter = DateFormatter()
-        func String2DateType(string : String) -> Date?{
-            let formatter = DateFormatter()
-            formatter.locale = Locale(identifier: "ko_kr")
-            formatter.dateFormat = "yyMMdd"
-            
-            return formatter.date(from: string)
-        }
-        print("11111: \(data.date)")
-        var string2date = String2DateType(string: data.date)
-        formatter.dateFormat = "yy년 MM월 dd일"
-        
-        cell.mainTitleLabel.text = data.title
-        cell.mainTitleLabel.font = .boldSystemFont(ofSize: 24)
-        cell.mainTitleLabel.numberOfLines = 0
-        cell.backgroundColor = .white
-       
-        cell.smallTitleLabel.text = data.subtitle
-        cell.smallTitleLabel.font = .systemFont(ofSize: 14)
-        cell.smallTitleLabel.textColor = .lightGray
-        cell.smallTitleLabel.textAlignment = .left
-        
-        cell.dateLabel.text = formatter.string(from: string2date!)
-        cell.dateLabel.font = .systemFont(ofSize: 14)
-        cell.dateLabel.textColor = .lightGray
-        cell.dateLabel.textAlignment = .right
-        
-        print(cell.mainTitleLabel.text!)
-        // checkmark.square.fill
-        
-       // cell.titleLabel
-//
-//        cell.subtitleLabel.text = data.money.formatted()
-//        cell.subtitleLabel.font = .systemFont(ofSize: 14)
-//        cell.subtitleLabel.textColor = .darkGray
-//
-        
+        cell.configureCell(data)
+
         // image url 주소
-        let url = URL(string: data.photo_image)
-        print("urlurlurlurlurlurl\(url!)")
-        cell.travelimageView.kf.setImage(with : url)
-        cell.travelimageView.layer.cornerRadius = 10
-//        let name = data.star ? "star.fill" : "star"
-//        let image = UIImage(systemName: name)
-//        cell.starButton.setImage(image, for: .normal)
-//        cell.starButton.tag = indexPath.row
-//        cell.starButton.tintColor = .black
-//        cell.starButton.addTarget(self, action: #selector(starButtonClicked), for: .touchUpInside)
-//        
-//        let name2 = data.check ? "checkmark.square.fill" : "checkmark.square"
-//        let image2 = UIImage(systemName: name2)
-//        cell.checkButton.setImage(image2, for: .normal)
-//        cell.checkButton.tag = indexPath.row
-//        cell.checkButton.tintColor = .black
-//        cell.checkButton.addTarget(self, action: #selector(checkButtonClicked), for: .touchUpInside)
-//
+//        let url = URL(string: data.photo_image)
+//        cell.travelimageView.kf.setImage(with : url)
+//        cell.travelimageView.layer.cornerRadius = 10
+
+//        let url = URL(string: data.photo_image)
+//        cell.travelimageView.kf.setImage(with: url, placeholder: UIImage(systemName: "heart"))
+//        cell.travelimageView.layer.cornerRadius = 10
         return cell
     }
     
