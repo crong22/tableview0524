@@ -111,7 +111,7 @@
                 <outlet property="starLabel" destination="jQI-Rz-cuQ" id="dBh-kO-Ueu"/>
                 <outlet property="subLabel" destination="Lw6-e5-4Mc" id="erk-52-O0S"/>
             </connections>
-            <point key="canvasLocation" x="-64.122137404580144" y="27.464788732394368"/>
+            <point key="canvasLocation" x="-461" y="26"/>
         </tableViewCell>
     </objects>
     <resources>
