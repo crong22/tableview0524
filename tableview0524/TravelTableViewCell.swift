@@ -54,5 +54,6 @@ class TravelTableViewCell: UITableViewCell {
         travelimageView.kf.setImage(with : url)
         travelimageView.layer.cornerRadius = 10
     }
+    
 
 }

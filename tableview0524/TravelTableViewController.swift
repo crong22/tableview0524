@@ -16,11 +16,11 @@ class TravelTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.rowHeight = 500
+        tableView.rowHeight = 550
 
     }
-    
-    //셀의 개수
+
+    // 셀의 개수
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return travellist.count
     }
@@ -43,5 +43,5 @@ class TravelTableViewController: UITableViewController {
 //        cell.travelimageView.layer.cornerRadius = 10
         return cell
     }
-    
+
 }
