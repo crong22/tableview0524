@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -16,16 +17,20 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="225"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WVz-as-wAp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="225"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iGp-V9-5XK">
-                        <rect key="frame" x="267" y="3" width="50" height="30"/>
+                        <rect key="frame" x="269" y="3" width="48" height="24"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="50" id="eg4-zh-vVW"/>
-                            <constraint firstAttribute="height" constant="30" id="mza-vA-vFV"/>
+                            <constraint firstAttribute="width" constant="48" id="eg4-zh-vVW"/>
+                            <constraint firstAttribute="height" constant="24" id="mza-vA-vFV"/>
                         </constraints>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="plain" title="AD" subtitle="">
-                            <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
+                            <fontDescription key="titleFontDescription" type="system" pointSize="8"/>
                         </buttonConfiguration>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qUR-Z4-wG0">
@@ -38,9 +43,13 @@
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="iGp-V9-5XK" secondAttribute="trailing" constant="3" id="B3t-bf-AnH"/>
                     <constraint firstAttribute="trailingMargin" secondItem="qUR-Z4-wG0" secondAttribute="trailing" constant="20" id="EGJ-K4-5qR"/>
+                    <constraint firstItem="WVz-as-wAp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="IXK-Vw-zvW"/>
                     <constraint firstItem="qUR-Z4-wG0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="20" id="JEh-G6-Ee5"/>
+                    <constraint firstAttribute="bottom" secondItem="WVz-as-wAp" secondAttribute="bottom" id="TJf-pF-nGN"/>
+                    <constraint firstItem="WVz-as-wAp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="aPq-Pe-q08"/>
                     <constraint firstItem="iGp-V9-5XK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="3" id="eJN-2R-KJi"/>
                     <constraint firstItem="qUR-Z4-wG0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="16" id="j70-rJ-0CL"/>
+                    <constraint firstAttribute="trailing" secondItem="WVz-as-wAp" secondAttribute="trailing" id="lfo-J2-mh3"/>
                     <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="qUR-Z4-wG0" secondAttribute="bottom" constant="8" id="qLJ-Tf-0xs"/>
                 </constraints>
             </tableViewCellContentView>
@@ -49,8 +58,14 @@
                 <outlet property="adButton" destination="iGp-V9-5XK" id="4Hb-N8-Ayx"/>
                 <outlet property="adTitleLabel" destination="qUR-Z4-wG0" id="60e-YK-RQ4"/>
                 <outlet property="mainView" destination="H2p-sc-9uM" id="e52-N9-0c1"/>
+                <outlet property="mainbackView" destination="WVz-as-wAp" id="asm-C0-Gwr"/>
             </connections>
             <point key="canvasLocation" x="7.6335877862595414" y="52.464788732394368"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

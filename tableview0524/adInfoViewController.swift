@@ -8,7 +8,9 @@
 import UIKit
 
 class adInfoViewController: UIViewController {
-
+    // 1단계 값을 받을 것을 만들어준다
+    var data : Travel?
+    
     @IBOutlet var mainView: UIView!
     @IBOutlet var adLabel: UILabel!
     
@@ -24,7 +26,11 @@ class adInfoViewController: UIViewController {
         let adtitle = UserDefaults.standard.string(forKey: "adtitle")
         adLabel.text = adtitle
         
+        mainView.backgroundColor = data?.bgcolor
+        
         dismissButton.setTitle("닫기", for: .normal)
+//        let backcolor = UserDefaults.standard.string(forKey: "backcolor")
+//        mainView.backgroundColor = backcolor
         
     }
     @IBAction func dismissButtonClicked(_ sender: UIButton) {

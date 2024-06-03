@@ -8,8 +8,9 @@
 import UIKit
 import Kingfisher
 
-class DetailInfoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+class DetailInfoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
     var list = TravelInfo().travel
     var adlist : [Travel] = []
     var num = 0
@@ -51,9 +52,12 @@ class DetailInfoViewController: UIViewController, UITableViewDelegate, UITableVi
         if data.ad {
             let cell1 = tableView.dequeueReusableCell(withIdentifier: "AdTableViewCell", for: indexPath) as! AdTableViewCell
             cell1.configureAdCell(list[indexPath.row])
-            
+
             // ad
             UserDefaults.standard.setValue(data.title, forKey: "adtitle")
+            
+
+//            var backcolorarr = backcolor.split(separator: " ")
             // ad
             
             // 1. 스토리보드 가져오기
@@ -67,16 +71,19 @@ class DetailInfoViewController: UIViewController, UITableViewDelegate, UITableVi
             // 스토리보드에있는 파일을 인스턴스에 올려줄 준비
             // 컨트롤러 안에 있는 identity > 스토리보드ID를 설정하여 아래 withIdentifier에 입력!!!!!! ( 똑같은 이름으로 설정하여 편하게  함 )
             let vc = sb.instantiateViewController(withIdentifier: "adInfoViewController") as! adInfoViewController
-            
+            // 2단계 값을 넘겨준다.
+            vc.data = list[indexPath.row]
             vc.modalPresentationStyle = .fullScreen
             // 3. 화면 띄우기
             // 띄어주고싶은화면이름 , true (보통)
             present(vc, animated: true)
+//            vc.mainView.backgroundColor = data.bgcolor
         }else {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "CityTableViewCell", for: indexPath) as! CityTableViewCell
             cell.configureCell(list[indexPath.row])
             let data = list[indexPath.row]
+            
             
             // cityName
             UserDefaults.standard.setValue(data.title, forKey: "cityname")

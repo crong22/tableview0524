@@ -16,7 +16,8 @@ class CityInfoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print(#function)
+      
         cityLabel.font = .boldSystemFont(ofSize: 28)
         cityLabel.textColor = .black
         cityLabel.textAlignment = .center
@@ -38,7 +39,7 @@ class CityInfoViewController: UIViewController {
         
     }
     override func awakeFromNib() {
-//        print(#function)
+        print(#function)
 //        cityLabel.font = .boldSystemFont(ofSize: 28)
 //        cityLabel.textColor = .black
 //        cityLabel.textAlignment = .center
@@ -48,7 +49,12 @@ class CityInfoViewController: UIViewController {
 //        subTitelLabel.textAlignment = .center
 //        subTitelLabel.numberOfLines = 0
     }
-    func configureCell(_ data : Travel) {
+ 
+}
+
+
+func configureCell(_ data : Travel) {
+    print(#function)
 //        if data.title == nil {
 //            print("nil")
 //        }else{
@@ -56,10 +62,9 @@ class CityInfoViewController: UIViewController {
 //        }
 
 //        cityLabel.text = data.title
-//     
+//
 //        subTitelLabel.text = data.description
-//          
+//
 //        let url = URL(string: data.travel_image ?? "nil")
 //        cityImageView.kf.setImage(with: url, placeholder: UIImage(systemName: "heart"))
-    }
 }

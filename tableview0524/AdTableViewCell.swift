@@ -7,12 +7,19 @@
 
 import UIKit
 
+
+
 class AdTableViewCell: UITableViewCell {
 
+    var data : [Travel]?
     @IBOutlet var mainView: UIView!
     @IBOutlet var adTitleLabel: UILabel!
     @IBOutlet var adButton: UIButton!
 
+    @IBOutlet var mainbackView: UIView!
+    
+
+    
     override func awakeFromNib() {
         print(#function)
         adTitleLabel.font = .boldSystemFont(ofSize: 17)
@@ -23,6 +30,8 @@ class AdTableViewCell: UITableViewCell {
         adButton.tintColor = .black
         adButton.backgroundColor = .white
         adButton.layer.cornerRadius = 10
+        
+        mainbackView.layer.cornerRadius = 10
     }
     
     func configureAdCell(_ data : Travel) {
@@ -30,11 +39,8 @@ class AdTableViewCell: UITableViewCell {
         adTitleLabel.text = data.title
         
         adButton.setTitle("AD", for: .normal)
-
-        let red = CGFloat.random(in: 0...1)
-        let green = CGFloat.random(in: 0...1)
-        let blue = CGFloat.random(in: 0...1)
-        backgroundColor = UIColor(red: red, green: green, blue: blue, alpha: 1.0)
+        
+        mainbackView.backgroundColor = data.bgcolor
 
     }
 }
